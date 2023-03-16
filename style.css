@@ -1,101 +1,133 @@
 *{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
 body{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: #a1c3ff; 
 }
-nav{
-    background: #37e2f6;
-    height: 80px;
-    width: 100%;
+
+img{
+    max-width: 30%;
+} 
+
+h1,h2{
+    margin-bottom: 15px;
 }
-label.logo{
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
+
+ul {
+    list-style-type: none;
 }
-nav ul{
-    float: right;
-    margin-right: 20px;
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
 }
-nav ul li{
-    display: inline;
-    line-height: 80px;
-    margin: 0 5px;
-    font-weight: bold;
+
+.navbar{
+    background: #3474e6;
+    color: #fff;
+    height: 60px;
 }
-nav ul li a{
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
+
+.navbar .logo{
+    vertical-align: middle;
+    margin-top: 5px;
+    width: 130px;
+}
+
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold ;
+}
+
+.navbar a:hover{
+    color: lightblue;
+}
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li{
+     margin-left: 20px;
+}
+
+.header{
+    background: #0a51cc;
+    color: #fff;
+    min-height: 600px; 
+}
+
+.header h1{
+    font-size: 3rem;
+    font-weight:800;
+    line-height: 1;
+}
+
+.header img{
+    max-width: 400px;
+}
+
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px;
     
 }
-a.active, a:hover{
-    background:#96f2f9;
-    transition: .5s;
+
+
+.boxes .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+
+    
 }
-.checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    margin-top: 25px;
-    cursor: pointer;
-    display: none;
+
+.box{
+    flex: 1;
+    background: #0a51cc;
+    color: #fff;
+    border-radius: 10px;
+    margin: 20px 10px; 
+    box-shadow: 0 3px 5px rgba(0, 0, 0 , 0.6);
+    padding: 15px  20px;
 }
-#check{
-    display: none;
-}
-@media (max-width: 952px){
-    label.logo{
-        font-size: 30px;
-        padding-left: 50px;
-    }
-    nav ul li a{
-        font-size: 16px;
-    }
-}
-@media (max-width: 858px){
-    .checkbtn{
-        display: block;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #436166;
-        top: 80px;
-        left: -100%;
+
+@media(max-width: 768px){
+    .header .container{
+        flex-direction: column;
+        padding-top: 20px;
         text-align: center;
-        transition: all .5s;
+        padding-bottom: 100px;
+        padding-top: 50px;
     }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
+
+    .boxes .container{
+        display: block ;
+        text-align: center;
     }
-    nav ul li a{
-        font-size: 20px ;
+
+    .navbar .logo{
+        vertical-align: middle;
+        margin-top: 5px;
+        width: 130px;
     }
-    a:hover, a.active{
-        background: none;
-        color: #96f2f9;
-    }
-    #check:checked ~ ul{
-        left: 0;
-    }
-}
-section{
-    background: url(DANXPLORE1.jpg) no-repeat;
-    background-size: cover;
-    height: calc(100vh);
+    
 }
